@@ -1,6 +1,24 @@
 package com.example
 
 fun main(args: Array<String>) {
+
+    val N = 1041
+    val nBinaryString = N.toString(2)
+
+    var binaryGap = 0
+    var startIndex = 0
+    do {
+        val endIndex = nBinaryString.indexOf('1', startIndex, true)
+        val newBinaryGap = endIndex - startIndex
+
+        binaryGap = if(binaryGap < newBinaryGap) newBinaryGap else binaryGap
+
+        startIndex = endIndex + 1
+    } while (endIndex != -1)
+
+    println("Binary Gap : $binaryGap")
+    println(N.toString(2))
+
     println(args.size)
     println("Hello Kotlin!")
     println(sum(1, 2))

@@ -1,8 +1,8 @@
-### Kotlin
+## Kotlin
 [https://kotlinlang.org/](https://kotlinlang.org/)
 
 ---
-### if-else
+## if-else
 <details>
   <summary>Details</summary>
   <p>
@@ -119,7 +119,7 @@ fun pickRandomLottoByCurrTime() {
 </details>
 
 ---
-# break, continue, return with label
+## break, continue, return with label
  <details>
   <summary>Details</summary>
   <p>
@@ -174,4 +174,6 @@ fun labelReturn() {
 ```
   </p>
 </details>
-    
+
+---
+##
