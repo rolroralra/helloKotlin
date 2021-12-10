@@ -3,8 +3,7 @@ package com.example.http
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.PrintWriter
-import java.net.ServerSocket
-import java.net.Socket
+import java.net.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -14,7 +13,8 @@ class HttpServer(private val port: Int, private val nThreads: Int) : IHttpServer
     private var isRunning = false
 
     override fun open() {
-        serverSocket = ServerSocket(port)
+        serverSocket = ServerSocket()
+        serverSocket.bind(InetSocketAddress(port))
         executorService = Executors.newFixedThreadPool(nThreads)
         isRunning = true
 
